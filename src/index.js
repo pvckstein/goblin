@@ -4,6 +4,7 @@ import moveImageFA from './plugins/move-image-fa.js';
 import addIds from './plugins/add-ids.js';
 import topicPrefixes from './plugins/topic-prefixes.js';
 import codeboxCopy   from './plugins/codebox-copy.js';
+import diceRollMap from './plugins/dice-rollmap.js';
 
 if (window && window.Goblin) {
   const { Goblin } = window;
@@ -11,5 +12,6 @@ if (window && window.Goblin) {
   Goblin.use(addIds);
   Goblin.use(topicPrefixes);
   Goblin.use(codeboxCopy); 
+  Goblin.use(diceRollMap);
   Goblin.start();
 }
