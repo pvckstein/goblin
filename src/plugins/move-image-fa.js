@@ -3,10 +3,7 @@ const plugin = {
   name: 'move-image-and-links-fa',
   idempotent: true,
   run({ utils, ctx }) {
-    const forums = utils.qsa('.forum', ctx);
-    // Quita este log cuando quieras
-    console.log('[Goblin] move-image-fa running on', forums.length, 'forums');
-
+    const forums = utils.qsa('.forum-inner', ctx);
     forums.forEach((forum) => {
       // 1) .forum_links / .forum-links → .links
       const linksSrc = forum.querySelector('.forum_links, .forum-links');
